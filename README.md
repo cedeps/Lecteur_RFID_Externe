@@ -26,7 +26,7 @@ Veuillez suivre la procédure DFROBOT 8 : https://wiki.dfrobot.com/FireBeetle_Bo
 
 7) ouvrir le fichier .ino disponible sur cette page et le téléverser sur la carte (flèche "-> " dans l'IDE)
 
-
+NB: vous pouvez renommer le nom de votre boitier en modifiant la ligne  SerialBT.begin("Box_001"); // Nom du Bluetooth
 # Harware
 ## Matériel nécessaire:
 Matériel trouvé chez [Gotronic.fr](https://www.gotronic.fr/)
