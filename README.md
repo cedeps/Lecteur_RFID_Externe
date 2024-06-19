@@ -7,8 +7,7 @@ Création d'un lecteur RFID Externe bluetooth compatible avec App Inventor. Apr�
 
 
 ## Software
-Télécharger l'ide Arduino: https://www.arduino.cc/en/software 
-Installer 
+Veuillez suivre la procédure DFROBOT 8 : https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654 
 
 ## Harware
 ### Matériel nécessaire:
@@ -38,7 +37,7 @@ Si vous souhaitez y intégrer une batterie interne, vous devez ajouter:
  
 	Carte LiPo Rider Plus 106990290 (ref 36778)
 
-### Schéma de montage sans batterie 
+
 
 
 
