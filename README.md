@@ -1,5 +1,7 @@
 # Lecteur_RFID_Externe
-Création d'un lecteur RFID Externe bluetooth compatible avec App Inventor
+*Création d'un lecteur RFID Externe bluetooth compatible avec App Inventor
+*Installer les bibliothèques nécessaires:
+
 
 # Software
 Télécharger l'ide Arduino: https://www.arduino.cc/en/software 
