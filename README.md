@@ -7,7 +7,7 @@ Création d'un lecteur RFID Externe bluetooth compatible avec App Inventor. Apr�
 
 # Software
 ## Etape 1: configurer l'IDE Arduino pour communiquer avec ma carte firebeetle ESP32:
-		Veuillez suivre la procédure DFROBOT 8 : https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654 
+Veuillez suivre la procédure DFROBOT 8 : https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654 
 		Installer l'IDE
 		Configurer l'IDE pour la carte en ajoutant l'URL Json : https://espressif.github.io/arduino-esp32/package_esp32_index.json
 		Charger la carte ESP32 et selectionner Fire!beetle 2 ESP32-E
