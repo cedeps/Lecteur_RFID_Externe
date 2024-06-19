@@ -24,7 +24,7 @@ Veuillez suivre la procédure DFROBOT 8 : https://wiki.dfrobot.com/FireBeetle_Bo
 
 6) Fermer la fenêtre une fois l’installation terminée.
 
-## Etape 3: ouvrir le fichier .ino disponible sur cette page et le téléverser sur la carte (flèche "-> " dans l'IDE)
+7) ouvrir le fichier .ino disponible sur cette page et le téléverser sur la carte (flèche "-> " dans l'IDE)
 
 
 # Harware
