@@ -9,6 +9,7 @@ Création d'un lecteur RFID Externe bluetooth compatible avec App Inventor. Apr�
 ## Software
 Télécharger l'ide Arduino: https://www.arduino.cc/en/software 
 Installer 
+
 ## Harware
 ### Matériel nécessaire:
 ####Matériel trouvé chez [Gotronic.fr](https://www.gotronic.fr/)
@@ -31,11 +32,13 @@ Installer
 	
  Gaine thermorétractable 1,6 mm (ref 8840)
 
-#####Si vous souhaitez y intégrer une batterie interne, vous devez ajouter
+#####Si vous souhaitez y intégrer une batterie interne, vous devez ajouter:
+
 	Accu LiPo 3,7 Vcc 1000 mAh PR523450 (ref 9742)
+ 
 	Carte LiPo Rider Plus 106990290 (ref 36778)
 
-
+### Schéma de montage
 
 
 
