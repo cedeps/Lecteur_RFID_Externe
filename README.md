@@ -5,21 +5,21 @@ En cas de changement de carte, veuillez adapter les paramètres
 # Lecteur_RFID_Externe
 Création d'un lecteur RFID Externe bluetooth compatible avec App Inventor. Après la lecture du tag rfid, le lecteur envoi l'UUID du tag à la tablette par bluetooth
 
-## Software
-###Etape 1: configurer l'IDE Arduino pour communiquer avec ma carte firebeetle ESP32:
+# Software
+##Etape 1: configurer l'IDE Arduino pour communiquer avec ma carte firebeetle ESP32:
 		Veuillez suivre la procédure DFROBOT 8 : https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654 
 		Installer l'IDE
 		Configurer l'IDE pour la carte en ajoutant l'URL Json : https://espressif.github.io/arduino-esp32/package_esp32_index.json
 		Charger la carte ESP32 et selectionner Fire!beetle 2 ESP32-E
-###Etape 2 : Installer la bibliothèque RC522
+##Etape 2 : Installer la bibliothèque RC522
 		Ouvrez l’IDE Arduino et aller dans Croquis > Inclure une bibliothèque > Gérer les bibliothèques
 		Dans le gestionnaire de bibliothèques, rechercher « MFRC522 » et installer MFRC522 
   		Fermer la fenêtre une fois l’installation terminée.
-###Etape 3: ouvrir le fichier .ino disponible sur cette page et le téléverser sur la carte (flèche "-> " dans l'IDE)
+##Etape 3: ouvrir le fichier .ino disponible sur cette page et le téléverser sur la carte (flèche "-> " dans l'IDE)
 
 
-## Harware
-### Matériel nécessaire:
+# Harware
+## Matériel nécessaire:
 Matériel trouvé chez [Gotronic.fr](https://www.gotronic.fr/)
 	
 	 Module FireBeetle 2 ESP32-E DFR0654 (ref 37420)
