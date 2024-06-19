@@ -1,5 +1,4 @@
-NB: les renseignements suivants sont donnés pour une carte Module FireBeetle 2 ESP32-E DFR0654
-![image]([https://github.com/cedeps/Lecteur_RFID_Externe/assets/62479374/7e90bf73-9e43-405a-b3c8-4e417cf4d198](https://www.gotronic.fr/ar-module-firebeetle-esp32-dfr0478-26810.jpg))
+NB: les renseignements suivants sont donnés pour une carte Module FireBeetle 2 ESP32-E DFR0654(https://www.gotronic.fr/ar-module-firebeetle-esp32-dfr0478-26810.jpg))
 
 
 # Lecteur_RFID_Externe
