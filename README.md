@@ -38,15 +38,7 @@ Si vous souhaitez y intégrer une batterie interne, vous devez ajouter:
  
 	Carte LiPo Rider Plus 106990290 (ref 36778)
 
-### Schéma de montage
+### Schéma de montage sans batterie 
 
 
 
-
-
-
-
-
-Procédez aux branchements suivants:
-## Sans batterie, alimentation Externe via le port USB de la carte ESP 32
-## Avec batterie, alimentation interne 
