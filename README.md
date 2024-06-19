@@ -12,7 +12,7 @@ Installer
 
 ## Harware
 ### Matériel nécessaire:
-####Matériel trouvé chez [Gotronic.fr](https://www.gotronic.fr/)
+Matériel trouvé chez [Gotronic.fr](https://www.gotronic.fr/)
 	
 	 Module FireBeetle 2 ESP32-E DFR0654 (ref 37420)
 		
@@ -32,7 +32,7 @@ Installer
 		
 	 Gaine thermorétractable 1,6 mm (ref 8840)
 
-#####Si vous souhaitez y intégrer une batterie interne, vous devez ajouter:
+Si vous souhaitez y intégrer une batterie interne, vous devez ajouter:
 
 	Accu LiPo 3,7 Vcc 1000 mAh PR523450 (ref 9742)
  
