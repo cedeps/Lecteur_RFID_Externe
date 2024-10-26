@@ -1,63 +1,78 @@
-NB: les renseignements suivants sont donnés pour une carte Module FireBeetle 2 ESP32-E DFR0654 ([https://www.gotronic.fr/ar-module-firebeetle-esp32-dfr0478-26810.jpg)](https://www.gotronic.fr/art-module-firebeetle-esp32-dfr0478-26810.htm))
-En cas de changement de carte, veuillez adapter les paramètres 
+# Lecteur RFID Externe Bluetooth
 
+Ce projet permet de créer un lecteur RFID Bluetooth compatible avec App Inventor. Après la lecture d'un tag RFID, l'appareil envoie l'UUID du tag à une tablette via Bluetooth.
 
-# Lecteur_RFID_Externe
-Création d'un lecteur RFID Externe bluetooth compatible avec App Inventor. Après la lecture du tag rfid, le lecteur envoi l'UUID du tag à la tablette par bluetooth
+### Matériel recommandé
+Cette configuration est conçue pour une carte **FireBeetle 2 ESP32-E DFR0654**. En cas d’utilisation d'une autre carte, les paramètres devront être ajustés.  
+![FireBeetle 2 ESP32-E](https://www.gotronic.fr/ar-module-firebeetle-esp32-dfr0478-26810.jpg)
 
-# Software
-## Etape 1: configurer l'IDE Arduino pour communiquer avec ma carte firebeetle ESP32:
+## Table des matières
+1. [Pré-requis Logiciel](#logiciel)
+2. [Matériel Requis](#matériel)
+3. [Configuration et Installation](#installation)
+4. [Personnalisation Bluetooth](#bluetooth)
 
-Veuillez suivre la procédure DFROBOT 8 : https://wiki.dfrobot.com/FireBeetle_Board_ESP32_E_SKU_DFR0654 
+---
 
-1) Installer l'IDE
+## 1. Pré-requis Logiciel <a name="logiciel"></a>
 
-2) Configurer l'IDE pour la carte en ajoutant l'URL Json : https://espressif.github.io/arduino-esp32/package_esp32_index.json
+### Configuration de l'IDE Arduino pour la carte FireBeetle ESP32
+Suivez les étapes ci-dessous pour configurer l'IDE Arduino afin de travailler avec la carte FireBeetle 2 ESP32-E :
+1. **Installer l’IDE Arduino**
+2. **Ajouter le support ESP32** : dans Arduino, allez dans *Fichier > Préférences* et ajoutez l'URL JSON suivante pour le support de la carte : https://espressif.github.io/arduino-esp32/package_esp32_index.json
+3.  **Charger la carte ESP32** : une fois le package installé, sélectionnez *Outils > Type de carte > FireBeetle 2 ESP32-E* dans l’IDE.
 
-3) Charger la carte ESP32 et selectionner Fire!beetle 2 ESP32-E
+### Installation de la bibliothèque MFRC522
+Pour activer le lecteur RFID, suivez ces étapes pour installer et configurer la bibliothèque MFRC522 :
+1. Ouvrez l’IDE Arduino, puis allez dans *Croquis > Inclure une bibliothèque > Gérer les bibliothèques*.
+2. Dans le gestionnaire de bibliothèques, recherchez **MFRC522** et installez la version disponible. ([GitHub](https://github.com/miguelbalboa/rfid))
+3. **Modification du fichier `MFRC522Extended.cpp`** :
+- Accédez au fichier situé dans `Documents > Arduino > Libraries > MFRC522 > src > MFRC522Extended.cpp`.
+- À l’aide d’un éditeur de texte (ex. Notepad++), remplacez les lignes 824 et 847 par :
+  ```cpp
+  if (backData && (backLen != nullptr)) {
+  ```
+4. Fermez l’éditeur après avoir effectué les modifications.
 
-## Etape 2 : Installer la bibliothèque RC522 et modifier les lignes 
+5. **Ouverture et téléversement du programme** : ouvrez le fichier `.ino` fourni sur cette page et téléversez-le sur la carte en cliquant sur la flèche "→" dans l'IDE Arduino.
 
-4) Ouvrez l’IDE Arduino et aller dans Croquis > Inclure une bibliothèque > Gérer les bibliothèques
+### Personnalisation du Bluetooth <a name="bluetooth"></a>
+Pour renommer le périphérique Bluetooth :
+- Modifiez la ligne suivante dans le fichier `.ino` :
+  ```cpp
+  SerialBT.begin("Box_001"); // Nom du Bluetooth
+  ```
+- Remplacez `"Box_001"` par le nom souhaité.
 
-5) Dans le gestionnaire de bibliothèques, rechercher « MFRC522 » https://github.com/miguelbalboa/rfid et installer MFRC522
+---
 
-6) Aller dans Documents>Arduino>Libraries>MFRC522>src>MFRC522Extended.cpp et Modifier les lignes 824 et 847 avec un editeur de code(notepad++). par ##if (backData && (backLen != nullptr)) {""
+## 2. Matériel Requis <a name="matériel"></a>
+Voici la liste du matériel nécessaire pour assembler ce projet, disponible chez [Gotronic.fr](https://www.gotronic.fr/).
 
-7) Fermer la fenêtre une fois l’installation terminée.
+| Composant                                   | Référence          |
+|---------------------------------------------|--------------------|
+| **Carte FireBeetle 2 ESP32-E**              | DFR0654 (ref 37420) |
+| **Buzzer SV4**                              | ref 5465          |
+| **LED 5 mm Rouge et Verte**                 | ref 3790, 3792    |
+| **Support LED plastique 5 mm**              | LD501A            |
+| **Module RFID TAG 13,56 MHz**               | GT138 (ref 35190) |
+| **Interrupteur**                            | R1933A (ref 7050) |
+| **Boîtier G400**                            | ref 11712         |
+| **Fil de câblage souple 0,14 mm² x 10m**    | ref 49097         |
+| **Gaine thermorétractable 1,6 mm**          | ref 8840          |
 
-8) ouvrir le fichier .ino disponible sur cette page et le téléverser sur la carte (flèche "-> " dans l'IDE)
+### Option : Ajout d'une batterie interne
+Pour une alimentation autonome, vous pouvez ajouter :
+- **Batterie LiPo 3,7 Vcc 1000 mAh** : ref 9742
+- **Carte LiPo Rider Plus** : ref 36778
 
-NB: vous pouvez renommer le nom de votre boitier en modifiant la ligne  SerialBT.begin("Box_001"); // Nom du Bluetooth
-# Harware
-## Matériel nécessaire:
-Matériel trouvé chez [Gotronic.fr](https://www.gotronic.fr/)
-	
-	 Module FireBeetle 2 ESP32-E DFR0654 (ref 37420)
-		
-	 Buzzer SV4 (ref 5465)
-		
-	 Led 5 mm 5V Rouge + Verte (ref 3790, 3792)
-		
-	 Support led plastique 5 mm (ref LD501A)
-		
-	 Module RFID TAG 13,56 MHz GT138 (ref 35190)
-		
-	 Interrupteur R1933A (ref 7050)
-		
-	 Boîtiers série G400 (ref 11712)
-	 	
-	  Fil de câblage souple 0,14 mm²x10m (ref 49097)
-		
-	 Gaine thermorétractable 1,6 mm (ref 8840)
+---
 
-Si vous souhaitez y intégrer une batterie interne, vous devez ajouter:
+## 3. Configuration et Installation <a name="installation"></a>
 
-	Accu LiPo 3,7 Vcc 1000 mAh PR523450 (ref 9742)
- 
-	Carte LiPo Rider Plus 106990290 (ref 36778)
+Une fois le matériel assemblé, suivez les étapes d'installation ci-dessus pour la configuration logicielle et le téléversement du programme dans la carte FireBeetle. Assurez-vous de vérifier chaque composant pour une communication Bluetooth fluide avec l’application mobile.
 
+---
 
-
-
+N'hésitez pas à soumettre des *issues* ou des *pull requests* pour toute amélioration. Bon projet !
 
