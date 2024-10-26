@@ -16,15 +16,17 @@ Veuillez suivre la procédure DFROBOT 8 : https://wiki.dfrobot.com/FireBeetle_Bo
 
 3) Charger la carte ESP32 et selectionner Fire!beetle 2 ESP32-E
 
-## Etape 2 : Installer la bibliothèque RC522
+## Etape 2 : Installer la bibliothèque RC522 et modifier les lignes 
 
 4) Ouvrez l’IDE Arduino et aller dans Croquis > Inclure une bibliothèque > Gérer les bibliothèques
 
-5) Dans le gestionnaire de bibliothèques, rechercher « MFRC522 » et installer MFRC522 
+5) Dans le gestionnaire de bibliothèques, rechercher « MFRC522 » https://github.com/miguelbalboa/rfid et installer MFRC522
 
-6) Fermer la fenêtre une fois l’installation terminée.
+6) Aller dans Documents>Arduino>Libraries>MFRC522>src>MFRC522Extended.cpp et Modifier les lignes 824 et 847 avec un editeur de code(notepad++). par ##if (backData && (backLen != nullptr)) {""
 
-7) ouvrir le fichier .ino disponible sur cette page et le téléverser sur la carte (flèche "-> " dans l'IDE)
+7) Fermer la fenêtre une fois l’installation terminée.
+
+8) ouvrir le fichier .ino disponible sur cette page et le téléverser sur la carte (flèche "-> " dans l'IDE)
 
 NB: vous pouvez renommer le nom de votre boitier en modifiant la ligne  SerialBT.begin("Box_001"); // Nom du Bluetooth
 # Harware
